@@ -98,6 +98,57 @@ pada statelesswidget tidak memliki keadaan ketika data berubah,yang berarti widg
 
 
 
-    
 
-    
+Tugas 8
+
+1. `Navigator.push()` berfungsi untuk menambahkan rute tambahan ke tumpukan layar saat ini, menampilkan halaman baru di atas halaman sebelumnya. Di sisi lain, `Navigator.pushReplacement()` juga berfungsi untuk pergantian halaman, namun yang membedakannya adalah navigasi ini tidak menyimpan histori, sehingga halaman baru langsung menggantikan yang sebelumnya tanpa menyimpan jejak histori. penggunaan `Navigator.push()` adalah seperti memindahkan rute dari halaman utama ke suatu halaman lain, sedangkan `Navigator.pushReplacement()` untuk pergantian halaman dari suatu halaman yang retriksi seperti halaman konfirmasi pembayaran.
+
+2.  masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing
+    - Container:
+        - Menyediakan wadah untuk menempatkan widget lain dan memungkinkan pengaturan seperti padding, margin, dan dekorasi.
+
+    - Row:
+        - Menyusun widget secara horizontal dalam satu baris, sering digunakan untuk menyusun elemen-elemen sejajar.
+
+    - Column:
+        - Menyusun widget secara vertikal dalam satu kolom, ideal untuk menyusun elemen-elemen berurutan dari atas ke bawah.
+
+    - ListView:
+        - Menyusun widget dalam daftar gulir, berguna untuk menampilkan daftar item yang dapat di-scroll.
+
+    - Stack:
+        - Menyusun widget secara tumpukan (z-index), memungkinkan penumpukan elemen satu di atas yang lain.
+
+    - Expanded:
+        - Mengisi sebanyak mungkin ruang yang tersedia dalam parent widget, umumnya digunakan dalam Row atau Column.
+
+    - Flexible:
+        - Memberikan bobot fleksibel untuk anak-anaknya dalam Row atau Column, memungkinkan pengaturan proporsi.
+
+    - GridView:
+        - Menyusun widget dalam bentuk grid atau matriks, cocok untuk menampilkan elemen-elemen dalam pola teratur.
+
+    - SizedBox:
+        - Memberikan dimensi tetap atau kosong pada widget, membantu mengontrol ukuran atau jarak antara elemen.
+
+
+3.  Elemen input pada form yang saya pakai pada tugas kali ini dan mengapa saya menggunakan elemen input tersebut
+
+    - Textfield
+        - untuk menerima input  berupa teks dari nama buku, deskripsi,amount,harga dan kategori
+
+    - Elevated Button
+        -  Untuk menghighlight tombol menyimpan
+
+    - Text Button
+        - untuk tombol lainnya dengan tetap menampilkan text
+
+4. Clean Architecture dalam Flutter melibatkan pembagian proyek ke dalam tiga lapisan utama: Domain, Data, dan Presentation. Lapisan Domain berisi aturan bisnis dan logika aplikasi, independen dari platform. Lapisan Data menangani akses ke sumber data, seperti database atau API, sementara lapisan Presentation menangani UI. Penggunaan Use Cases dalam lapisan Domain membantu mengisolasi logika aplikasi, sedangkan Repository memisahkan logika akses data dari implementasinya. Dengan pendekatan ini, aplikasi menjadi lebih mudah diuji, dipelihara, dan memungkinkan perubahan platform tanpa memengaruhi inti aplikasi.
+
+5. Step by Step 
+    - membuat drawer dengan membuat file dart baru di direktori baru di lib bernama widgets
+    - tambahkan drawer di menu utama dengan diimport dan menambahkan drawer: const LeftDrawer()
+    - buat form untuk memasukkan buku di file dart baru
+    - pada file dart yang sama munculkan data
+    - buat tombol agar bisa dinavigasi menggunakan `Navigator.push()` atau `Navigator.pushReplacement()`
+    - melakukan refactoring file dengan membuat terlebih dahulu folder screen di lib, lalu pindahkan sesuai dengan fungsinya.
