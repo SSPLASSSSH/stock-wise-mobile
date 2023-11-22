@@ -152,3 +152,110 @@ Tugas 8
     - pada file dart yang sama munculkan data
     - buat tombol agar bisa dinavigasi menggunakan `Navigator.push()` atau `Navigator.pushReplacement()`
     - melakukan refactoring file dengan membuat terlebih dahulu folder screen di lib, lalu pindahkan sesuai dengan fungsinya.
+
+
+
+Tugas 9
+
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+    - Kita bisa mengambil data JSON secara langsung ke dalam bentuk `Map<String, dynamic>` tanpa perlu membuat model terlebih dahulu. Meskipun demikian, pendekatan ini tidak dianggap sebagai praktik terbaik karena dapat membuat kode menjadi sulit dibaca dan dipahami, terutama karena sifat dinamis dari nilai-nilainya.
+
+2. Fungsi dari CookieRequest dan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+    - CookieRequest merupakan suatu kelas atau objek yang umumnya digunakan dalam konteks pengembangan aplikasi Flutter untuk menangani permintaan HTTP yang melibatkan pengelolaan cookie. CookieRequest biasanya digunakan untuk menyimpan dan mengelola informasi cookie yang berkaitan dengan permintaan HTTP, seperti menambah atau menghapus cookie.  dan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen dalam aplikasi Flutter agar informasi cookie dapat diakses dan dikelola secara konsisten. Dengan berbagi instance ini, ketika suatu komponen melakukan permintaan HTTP dan mengubah cookie, perubahan tersebut dapat terlihat oleh komponen lainnya. Ini memastikan bahwa seluruh aplikasi dapat berinteraksi dengan server sambil mempertahankan dan memanfaatkan informasi sesi atau keadaan lain yang disimpan dalam cookie, meningkatkan koordinasi dan konsistensi.
+
+3. Mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter
+    - Mendapatkan Data dari API atau Sumber JSON
+    - Menerjemahkan Data JSON ke Dart Objects
+    - Membuat model Dart yang sesuai dengan struktur data JSON
+    - Menerjemahkan data JSON ke dalam objek Dart menggunakan model yang telah dibuat
+    - Menampilkan Data di Flutter
+
+4. Mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter
+    - Input Data Akun pada Flutter
+        - Pengguna memasukkan informasi akun seperti nama pengguna dan kata sandi melalui antarmuka pengguna Flutter. Data ini kemudian dikirim ke backend Django.
+
+    - Permintaan ke API Django
+        - Aplikasi Flutter menggunakan paket-paket seperti `http` untuk mengirim permintaan HTTP ke API Django. Permintaan ini membawa informasi akun yang dimasukkan oleh pengguna.
+
+    - Proses Autentikasi Django
+        - Di backend Django, terdapat sistem autentikasi yang memproses permintaan dari Flutter. Django akan memverifikasi kecocokan informasi akun yang diterima dengan data yang ada di database.
+
+    - Token JWT (JSON Web Token)
+        - Jika informasi akun valid, backend Django dapat menghasilkan token JWT. Token ini merupakan tanda bahwa pengguna telah berhasil diautentikasi dan akan digunakan untuk otorisasi di permintaan-permintaan selanjutnya.
+
+    - Pengiriman Token ke Flutter
+        - Token JWT kemudian dikirim kembali ke aplikasi Flutter sebagai respons dari permintaan autentikasi. Aplikasi Flutter menyimpan token ini secara lokal.
+
+    - Otorisasi Permintaan Berikutnya
+        - Pada setiap permintaan selanjutnya ke API Django, aplikasi Flutter menyertakan token JWT di header permintaan. Django akan memvalidasi token ini untuk memastikan bahwa pengguna memiliki akses yang diperlukan.
+
+    - Tampilan Menu pada Flutter
+        - Jika token valid dan pengguna berhasil diautentikasi, aplikasi Flutter dapat menampilkan menu atau halaman tertentu yang hanya dapat diakses oleh pengguna yang telah login.
+
+5. seluruh widget yang saya pakai pada tugas ini dan jelaskan fungsinya masing-masing
+
+     - MyApp
+        - root widget aplikasi
+    
+    - MaterialApp
+        - widget yang digunakan untuk mengkonfigurasi aplikasi dengan properti seperti judul, tema, dan halaman beranda
+    
+    - MyHomeApp
+        - digunakan untuk mengatur tampilan dan perilaku halaman beranda.
+    
+    - title
+        - menentukan judul app
+    
+    - Theme
+        - menentukan tema app seperti themeData, colorScheme
+    - home
+        - menunjuk ke homepage() yg merupkan halaman utama
+
+    - Scaffold
+         - Digunakan untuk membuat kerangka dasar aplikasi dengan AppBar, tubuh, dan lainnya.
+
+    - Appbar 
+        - Digunakan untuk membuat bilah atas dengan judul "Stock Wise"
+
+    - SingleChildScrollView
+        -  memungkinkan kontennya dapat di-scroll.
+    
+    - Padding
+        - Digunakan untuk memberi padding ke kontennya.
+
+    - Text
+        - Digunakan untuk menampilkan teks "Your Stock Wise Inventory" dengan properti tertentu seperti fontsize dan fontWeight.
+
+    - GridView.count
+        - widget yang membuat grid layout dengan daftar item.
+
+    - shopcard (statelesswidget)
+        -  widget yang digunakan untuk membuat setiap card dengan ikon dan teks.
+    
+    - Material
+        -  digunakan untuk memberikan latar belakang berwarna kuning untuk setiap card.
+
+    - InkWell
+        - Digunakan untuk membuat area responsif terhadap sentuhan
+    
+    - Container
+        - Digunakan untuk mengatur konten dalam setiap card
+
+    - Icon
+        - Menampilkan ikon yang sesuai dengan setiap item dalam card.
+
+    - SnackBar
+        - Digunakan untuk menampilkan pesan yang muncul saat card diklik.
+
+    - Listtile
+        - untuk menampilkan judul menu pada left drawer
+    
+    - Listview
+        - sebagai wadah untuk menampung widget dan dapat dibuat banyak secara otomatis dengan bantuan builder
+
+
+
+
+
+
+
