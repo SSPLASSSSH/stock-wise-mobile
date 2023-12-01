@@ -254,6 +254,16 @@ Tugas 9
         - sebagai wadah untuk menampung widget dan dapat dibuat banyak secara otomatis dengan bantuan builder
 
 
+6. step by step kode
+    - untuk login, membuat app authentication dan menginstall beberapa library
+    - buat views dan simpan urls.py di authentication
+    - lakukan integrasi django dengan flutter dengan menginstall beberapa library yang telah disiapkan
+    - ambil endproduct di datafile json di proyek django, lalu letakkan di quicktype aghar mendapat kode yang sesuai untuk dart
+    - buat penyimpanan product di flutter dengan kode dari quicktype
+    - melakukan depedensi HTTP dan fetch data dari django
+    - kemudian tambahkan kode pada views.py proyek django agar menampilakn barang di flutter
+
+
 
 
 
